@@ -14,6 +14,17 @@ const Question = sequelize.define('Question', {
     autoIncrement: true,
     primaryKey: true,
   },
+  description: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  options: {
+    type: DataTypes.ARRAY[DataTypes.STRING],
+  },
+  answer_index: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
   difficulty: {
     type: DataTypes.INTEGER,
     allowNull: true,
@@ -26,12 +37,12 @@ const Question = sequelize.define('Question', {
     type: DataTypes.BOOLEAN,
     allowNull: true,
   },
-  valid_history: {
+  validation_history: {
     type: DataTypes.ARRAY(DataTypes.INT),
   },
-  learning_history: {
+  solved_history: {
     type: DataTypes.ARRAY(DataTypes.ARRAY),
-  }
+  },
 });
 
 // Create the table if it doesn't exist
