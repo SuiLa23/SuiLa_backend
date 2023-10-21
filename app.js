@@ -35,6 +35,9 @@ app.get('/', async (req, res) => {
 const loginRoute = require('./routes/login');
 app.use('/login', loginRoute);
 
+const questionRoute = require('./routes/question');
+app.use('/question', questionRoute);
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

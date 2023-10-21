@@ -19,7 +19,7 @@ const Question = sequelize.define('Question', {
     allowNull: false,
   },
   options: {
-    type: DataTypes.ARRAY[DataTypes.STRING],
+    type: DataTypes.ARRAY(Sequelize.STRING),
   },
   answer_index: {
     type: DataTypes.INTEGER,
@@ -38,10 +38,13 @@ const Question = sequelize.define('Question', {
     allowNull: true,
   },
   validation_history: {
-    type: DataTypes.ARRAY(DataTypes.INT),
+    type: DataTypes.ARRAY(Sequelize.INTEGER),
   },
-  solved_history: {
-    type: DataTypes.ARRAY(DataTypes.ARRAY),
+  solving_correctness_list: {
+    type: DataTypes.ARRAY(Sequelize.BOOLEAN),
+  },
+  solving_level_list: {
+    type: DataTypes.ARRAY(Sequelize.INTEGER),
   },
   creator_address: {
     type: DataTypes.STRING,
@@ -49,6 +52,6 @@ const Question = sequelize.define('Question', {
 });
 
 // Create the table if it doesn't exist
-sequelize.sync();
+Question.sync();
 
-module.exports = User;
+module.exports = Question;
