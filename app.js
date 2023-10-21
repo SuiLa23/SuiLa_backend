@@ -31,6 +31,18 @@ app.get('/', async (req, res) => {
   res.status(200).json({ message: 'Hello user', coins });
 });
 
+app.get('/get_validation_question', async(req, res) => {
+  const userAddress = req.query.user_address;
+  const badgeId = req.query.badge_id;
+
+  if (!badgeId || !uuidv4.validate(badgeId)) {
+      return res.status(406).send('Not Acceptable');
+  }
+
+  const question = getValidQuestion(userAddress); 
+  res.status(200).json(question);
+});
+
 // Load routes
 const loginRoute = require('./routes/login');
 app.use('/login', loginRoute);
