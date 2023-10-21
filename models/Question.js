@@ -43,6 +43,9 @@ const Question = sequelize.define('Question', {
   solved_history: {
     type: DataTypes.ARRAY(DataTypes.ARRAY),
   },
+  creator_address: {
+    type: DataTypes.STRING,
+  },
 });
 
 // Create the table if it doesn't exist
