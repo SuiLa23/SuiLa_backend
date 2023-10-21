@@ -15,7 +15,7 @@ const User = sequelize.define('User', {
   },
   level: {
     type: DataTypes.FLOAT,
-    allowNull: true,
+    allowNull: false,
   },
 });
 
