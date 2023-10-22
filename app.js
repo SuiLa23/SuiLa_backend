@@ -54,6 +54,9 @@ app.use('/register', loginRoute);
 const questionRoute = require('./routes/question');
 app.use('/question', questionRoute);
 
+const examRoute = require('./routes/exam');
+app.use('/exam', examRoute);
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
