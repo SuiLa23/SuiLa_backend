@@ -45,9 +45,6 @@ app.get('/get_validation_question', async(req, res) => {
 
 // Load routes
 
-const examRoute = require('./routes/exam');
-app.use('/exam', examRoute);
-
 const loginRoute = require('./routes/register');
 app.use('/register', loginRoute);
 

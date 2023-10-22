@@ -7,7 +7,7 @@ const { getFullnodeUrl, SuiClient } = require('@mysten/sui.js/client');
 const { TransactionBlock } = require('@mysten/sui.js/transactions');
 const { Ed25519Keypair } = require('@mysten/sui.js/keypairs/ed25519');
 const constants = require('../constants');
-const secret = require('../secret');
+const secret = require('../constants');
 
 
 
@@ -56,6 +56,21 @@ async function fetchRowsNotInCombination(combinations) {
   return results;
 }
 
+function keyFunction1_mocked(questions, user_answers) {
+  // Mocked key function
+  const length = questions.length; 
+  let accumulatedValue = 0;
+
+  for (let i = 0; i < length; i++) {
+      const correct = (questions[i]['answer_index'] == user_answers[i]);
+      const difficulty = questions[i]['difficulty'];
+      const sensitivity = questions[i]['sensitivity']+1;
+      accumulatedValue += correct * difficulty * sensitivity; 
+  }
+  return accumulatedValue / length;
+}
+
+
 router.get('/get_cost', async (req, res) => {
   const { user_address, difficulty, confidence } = req.body;
   const question_idxs = mapIndexToCombination(
@@ -76,35 +91,46 @@ router.get('/get_cost', async (req, res) => {
   }
 });
 
+function getRandomItemsFromArray(array, n) {
+  const shuffled = array.sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, n);
+}
+
 router.get('/take_exam', async (req, res) => {
   const {user_address, difficulty, confidence} = req.body;
+  const diff_mapping = new Map();
+  diff_mapping.set('A1', 150);
+  diff_mapping.set('A2', 300);
+  diff_mapping.set('B1', 450);
+  diff_mapping.set('B2', 550);
+  diff_mapping.set('C1', 700);
+  diff_mapping.set('C2', 850);
   const question_idxs = mapIndexToCombination(
     convertToIndex(user_address)
   )
   const test_pool = await fetchRowsInCombination(
    question_idxs 
   )
-  res.json(test_pool)
+  const filteredItems = test_pool.filter(
+    item => item.difficulty >= diff_mapping.get(difficulty)-150 && item.difficulty <= diff_mapping.get(difficulty)+150);
+  const selectedItems = getRandomItemsFromArray(filteredItems, confidence*2);
+  
+  res.json(selectedItems)
 });
 
 router.post('/submit', async (req, res) => {
   const {user_address, question_id_list, answer_list} = req.body;
-  
-  try {
-      let score = 0;
-      for (let i = 0; i < question_id_list.length; i++) {
-        const question = await Question.findOne({
-          where: { id: {
-            [Sequelize.Op.eq]: question_id_list[i], 
-          },}
-      })
-
-      if (!question) {
-        return res.send({ message: 'Question does not exist' });
-      }
-
-      // Calculate the score here
+    let promises = question_id_list.map(id => {
+      return Question.findOne({
+          where: { id: { [Sequelize.Op.eq]: id } }
+        });
+      });
+    let questions = await Promise.all(promises);
+    if (questions.length != answer_list.length) {
+      return res.send({ message: 'Some questions do not exist' });
     }
+    const score= keyFunction1_mocked(questions,answer_list);
+  
 
     const SCORE_TO_PASS = 0
 
@@ -139,10 +165,9 @@ router.post('/submit', async (req, res) => {
     } else {
       res.send({ message: 'You failed to pass the exam. Try harder.'})
     }
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Oh no... Something went wrong. Contact our customer service for help.' });
-  }
+  // } catch (error) {
+  //   console.error(error);
+  //   res.status(500).json({ message: 'Oh no... Something went wrong. Contact our customer service for help.' });
 });
 
 module.exports = router;
