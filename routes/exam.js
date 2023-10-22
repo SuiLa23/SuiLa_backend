@@ -30,41 +30,36 @@ function mapIndexToCombination(index) {
 }
 
 async function fetchRowsInCombination(combinations) {
+  const whereConditions = combinations.map(combination => Sequelize.literal(`id % 10 = ${combination}`));
   const results = await Question.findAll({
-      where: {
-          id: {
-              [Op.in]: combinations.map(combination => Sequelize.literal(`id % 10 = ${combination}`))
-          }
-      },
-      order: Sequelize.literal('RAND()')
+    where: Sequelize.or(...whereConditions),
+    order: Sequelize.literal('RANDOM()')
   });
+
   return results;
 }
 
-async function fetchRowsNotInCombination(combination) {
-  const excludedModValues = combination.map(num => num % 10);
-  const rows = await Question.findAll({
-      where: {
-          id: {
-              [Sequelize.Op.notIn]: excludedModValues
-          }
-      },
-      order: Sequelize.literal('RAND()'),
-      raw: true
+async function fetchRowsNotInCombination(combinations) {
+  const whereConditions = combinations.map(combination => Sequelize.literal(`id % 10 != ${combination}`));
+  const results = await Question.findAll({
+    where: Sequelize.or(...whereConditions),
+    order: Sequelize.literal('RANDOM()')
   });
-  return rows;
+
+  return results;
 }
 
 router.get('/get_cost', async (req, res) => {
   const { user_address, difficulty, confidence } = req.body;
-  const test_pool = fetchRowsInCombination(
-    mapIndexToCombination(
-      convertToIndex(user_address)
-    )
+  const question_idxs = mapIndexToCombination(
+    convertToIndex(user_address)
+  )
+  const test_pool = await fetchRowsInCombination(
+   question_idxs 
   )
   try {
-    if (test_pool.rowCount > 0) {
-      res.json({ message: 'good.' });
+    if (test_pool.length > 0) {
+      res.json({ cost: 50 });
     } else {
       res.status(401).json({ message: 'Login failed' });
     }
@@ -76,6 +71,13 @@ router.get('/get_cost', async (req, res) => {
 
 router.get('/take_exam', async (req, res) => {
   const {user_address, difficulty, confidence} = req.body;
+  const question_idxs = mapIndexToCombination(
+    convertToIndex(user_address)
+  )
+  const test_pool = await fetchRowsInCombination(
+   question_idxs 
+  )
+  res.json(test_pool)
 });
 
 module.exports = router;

@@ -1,0 +1,367 @@
+{
+  "1": {
+      "question_text": "What is the capital of France?",
+      "options": ["Paris", "London", "Berlin", "Madrid"],
+      "answer_index": 0,
+      "difficulty": 15
+    },
+    "2": {
+      "question_text": "Which color is associated with the sun?",
+      "options": ["Red", "Blue", "Yellow", "Green"],
+      "answer_index": 2,
+      "difficulty": 15
+    },
+    "3": {
+      "question_text": "What is 2 + 2?",
+      "options": ["1", "3", "4", "5"],
+      "answer_index": 2,
+      "difficulty": 15
+    },
+    "4": {
+      "question_text": "What do you use to cut paper?",
+      "options": ["Scissors", "Hammer", "Spoon", "Fork"],
+      "answer_index": 0,
+      "difficulty": 15
+    },
+    "5": {
+      "question_text": "Which of the following is a fruit?",
+      "options": ["Carrot", "Tomato", "Banana", "Potato"],
+      "answer_index": 2,
+      "difficulty": 15
+    },
+    "6": {
+      "question_text": "What do you wear on your feet?",
+      "options": ["Hat", "Gloves", "Shoes", "Socks"],
+      "answer_index": 2,
+      "difficulty": 15
+    },
+    "7": {
+      "question_text": "Which animal says 'meow'?",
+      "options": ["Dog", "Cat", "Bird", "Cow"],
+      "answer_index": 1,
+      "difficulty": 15
+    },
+    "8": {
+      "question_text": "What is the opposite of 'hot'?",
+      "options": ["Cold", "Warm", "Cool", "Freezing"],
+      "answer_index": 0,
+      "difficulty": 15
+    },
+    "9": {
+      "question_text": "What comes after Monday?",
+      "options": ["Sunday", "Tuesday", "Wednesday", "Thursday"],
+      "answer_index": 1,
+      "difficulty": 15
+    },
+    "10": {
+      "question_text": "Which of the following is a mode of transportation?",
+      "options": ["Apple", "Bicycle", "Book", "Ball"],
+      "answer_index": 1,
+      "difficulty": 15
+    },
+  "11": {
+    "question_text": "What is the capital of France?",
+    "options": ["London", "Berlin", "Paris", "Madrid"],
+    "answer_index": 2,
+    "difficulty": 30
+  },
+  "12": {
+    "question_text": "Which of these is a fruit?",
+    "options": ["Carrot", "Banana", "Potato", "Broccoli"],
+    "answer_index": 1,
+    "difficulty": 30
+  },
+  "13": {
+    "question_text": "What color is the sky on a clear day?",
+    "options": ["Green", "Red", "Blue", "Yellow"],
+    "answer_index": 2,
+    "difficulty": 30
+  },
+  "14": {
+    "question_text": "Which animal barks?",
+    "options": ["Cat", "Dog", "Cow", "Horse"],
+    "answer_index": 1,
+    "difficulty": 30
+  },
+  "15": {
+    "question_text": "What comes after Monday?",
+    "options": ["Wednesday", "Tuesday", "Thursday", "Friday"],
+    "answer_index": 1,
+    "difficulty": 30
+  },
+  "16": {
+    "question_text": "What is the opposite of 'hot'?",
+    "options": ["Cold", "Wet", "Big", "Small"],
+    "answer_index": 0,
+    "difficulty": 30
+  },
+  "17": {
+    "question_text": "How many fingers does a typical human have?",
+    "options": ["Eight", "Five", "Ten", "Two"],
+    "answer_index": 1,
+    "difficulty": 30
+  },
+  "18": {
+    "question_text": "Which of these is a sport?",
+    "options": ["Book", "Soccer", "Pizza", "Music"],
+    "answer_index": 1,
+    "difficulty": 30
+  },
+  "19": {
+    "question_text": "What is the main ingredient in bread?",
+    "options": ["Cheese", "Flour", "Sugar", "Eggs"],
+    "answer_index": 1,
+    "difficulty": 30
+  },
+  "20": {
+    "question_text": "Which season comes after winter?",
+    "options": ["Spring", "Summer", "Autumn", "Fall"],
+    "answer_index": 0,
+    "difficulty": 30
+  },
+  "21": {
+      "question_text": "What does 'abundant' mean?",
+      "options": ["Scarce", "Plentiful", "Limited", "Rare"],
+      "answer_index": 1,
+      "difficulty": 45
+    },
+    "22": {
+      "question_text": "Which of the following is a synonym for 'courageous'?",
+      "options": ["Timid", "Brave", "Cautious", "Shy"],
+      "answer_index": 1,
+      "difficulty": 45
+    },
+    "23": {
+      "question_text": "Which sentence is grammatically correct?",
+      "options": [
+        "She don't like ice cream.",
+        "They doesn't want to go to the movies.",
+        "He haven't finished his homework.",
+        "We haven't seen her today."
+      ],
+      "answer_index": 3,
+      "difficulty": 45
+    },
+    "24": {
+      "question_text": "What is the capital of France?",
+      "options": ["London", "Madrid", "Rome", "Paris"],
+      "answer_index": 3,
+      "difficulty": 45
+    },
+    "25": {
+      "question_text": "Choose the correct form of the verb: He ________ to the store yesterday.",
+      "options": ["go", "goes", "went", "going"],
+      "answer_index": 2,
+      "difficulty": 45
+    },
+    "26": {
+      "question_text": "Which of these words is a synonym for 'happy'?",
+      "options": ["Sad", "Joyful", "Angry", "Bored"],
+      "answer_index": 1,
+      "difficulty": 45
+    },
+    "27": {
+      "question_text": "What is the opposite of 'noisy'?",
+      "options": ["Quiet", "Loud", "Calm", "Chatty"],
+      "answer_index": 0,
+      "difficulty": 45
+    },
+    "28": {
+      "question_text": "Which of the following is an adverb?",
+      "options": ["Jumping", "Quickly", "Table", "Happy"],
+      "answer_index": 1,
+      "difficulty": 45
+    },
+    "29": {
+      "question_text": "Who wrote 'Romeo and Juliet'?",
+      "options": ["Charles Dickens", "William Shakespeare", "Jane Austen", "Mark Twain"],
+      "answer_index": 1,
+      "difficulty": 45
+    },
+    "30": {
+      "question_text": "Which continent is known as the 'Land of Kangaroos'?",
+      "options": ["Africa", "Asia", "Australia", "Europe"],
+      "answer_index": 2,
+      "difficulty": 45
+    },
+    "31": {
+        "question_text": "Which of the following words means 'a large city'?",
+        "options": ["Village", "Town", "Metropolis", "Hamlet"],
+        "answer_index": 2,
+        "difficulty": 55
+      },
+      "32": {
+        "question_text": "What does the idiom 'break a leg' mean?",
+        "options": ["Good luck", "Be careful", "Take a rest", "Don't move"],
+        "answer_index": 0,
+        "difficulty": 55
+      },
+      "33": {
+        "question_text": "Who wrote the play 'Romeo and Juliet'?",
+        "options": ["William Shakespeare", "Charles Dickens", "Jane Austen", "Mark Twain"],
+        "answer_index": 0,
+        "difficulty": 55
+      },
+      "34": {
+        "question_text": "What is the opposite of 'brave'?",
+        "options": ["Cowardly", "Timid", "Fearless", "Scared"],
+        "answer_index": 0,
+        "difficulty": 55
+      },
+      "35": {
+        "question_text": "Which tense is used to describe an action that will happen in the future?",
+        "options": ["Past tense", "Present tense", "Future tense", "Continuous tense"],
+        "answer_index": 2,
+        "difficulty": 55
+      },
+      "36": {
+        "question_text": "What is the capital of Australia?",
+        "options": ["Sydney", "Canberra", "Melbourne", "Brisbane"],
+        "answer_index": 1,
+        "difficulty": 55
+      },
+      "37": {
+        "question_text": "What is the chemical symbol for gold?",
+        "options": ["Go", "Gd", "Au", "Ag"],
+        "answer_index": 2,
+        "difficulty": 55
+      },
+      "38": {
+        "question_text": "Which planet is known as the 'Red Planet'?",
+        "options": ["Earth", "Venus", "Mars", "Jupiter"],
+        "answer_index": 2,
+        "difficulty": 55
+      },
+      "39": {
+        "question_text": "What is the process of plants making their own food using sunlight called?",
+        "options": ["Respiration", "Photosynthesis", "Fermentation", "Pollination"],
+        "answer_index": 1,
+        "difficulty": 55
+      },
+      "40": {
+        "question_text": "Who painted the 'Mona Lisa'?",
+        "options": ["Pablo Picasso", "Vincent van Gogh", "Leonardo da Vinci", "Michelangelo"],
+        "answer_index": 2,
+        "difficulty": 55
+      },
+      "41": {
+        "question_text": "Which of the following words is an antonym of 'ubiquitous'?",
+        "options": ["rare", "common", "widespread", "prevalent"],
+        "answer_index": 0,
+        "difficulty": 70
+      },
+      "42": {
+        "question_text": "What is the meaning of 'ephemeral'?",
+        "options": ["lasting a long time", "temporary", "permanent", "enduring"],
+        "answer_index": 1,
+        "difficulty": 70
+      },
+      "43": {
+        "question_text": "Identify the correct synonym for 'resilient'.",
+        "options": ["fragile", "vulnerable", "sturdy", "brittle"],
+        "answer_index": 2,
+        "difficulty": 70
+      },
+      "44": {
+        "question_text": "What is the opposite of 'laudable'?",
+        "options": ["blameworthy", "praiseworthy", "commendable", "worthy"],
+        "answer_index": 0,
+        "difficulty": 70
+      },
+      "45": {
+        "question_text": "Choose the correct definition of 'cogent'.",
+        "options": ["weak and unconvincing", "irrelevant", "clear and convincing", "complicated"],
+        "answer_index": 2,
+        "difficulty": 70
+      },
+      "46": {
+        "question_text": "What does the term 'quixotic' mean?",
+        "options": ["realistic", "impractical and idealistic", "conventional", "pragmatic"],
+        "answer_index": 1,
+        "difficulty": 70
+      },
+      "47": {
+        "question_text": "Identify the word that best describes 'altruism'.",
+        "options": ["selfishness", "greed", "selflessness", "narcissism"],
+        "answer_index": 2,
+        "difficulty": 70
+      },
+      "48": {
+        "question_text": "Which word is a synonym for 'precipitate'?",
+        "options": ["delay", "prolong", "hasten", "postpone"],
+        "answer_index": 2,
+        "difficulty": 70
+      },
+      "49": {
+        "question_text": "What does 'equivocate' mean?",
+        "options": ["speak clearly", "tell the truth", "use ambiguous language", "express directly"],
+        "answer_index": 2,
+        "difficulty": 70
+      },
+      "50": {
+        "question_text": "Choose the correct definition of 'benevolent'.",
+        "options": ["malevolent", "kind and generous", "cruel", "vindictive"],
+        "answer_index": 1,
+        "difficulty": 70
+      },
+  "51": {
+    "question_text": "Which of the following words is an antonym of 'ubiquitous'?",
+    "options": ["rare", "common", "pervasive", "prevalent"],
+    "answer_index": 0,
+    "difficulty": 85
+  },
+  "52": {
+    "question_text": "What is the synonym for 'ephemeral'?",
+    "options": ["permanent", "transitory", "lasting", "enduring"],
+    "answer_index": 1,
+    "difficulty": 85
+  },
+  "53": {
+    "question_text": "Which word means 'to make less severe or intense'?",
+    "options": ["exacerbate", "intensify", "alleviate", "aggravate"],
+    "answer_index": 2,
+    "difficulty": 85
+  },
+  "54": {
+    "question_text": "What is the opposite of 'laud'?",
+    "options": ["praise", "commend", "applaud", "criticize"],
+    "answer_index": 3,
+    "difficulty": 85
+  },
+  "55": {
+    "question_text": "Choose the correct word: She has a ___________ talent for music.",
+    "options": ["exceptional", "unexceptional", "exceptionally", "unexceptionally"],
+    "answer_index": 0,
+    "difficulty": 85
+  },
+  "56": {
+    "question_text": "What does 'circumlocution' mean?",
+    "options": ["concise speech", "indirect speech", "clear explanation", "logical reasoning"],
+    "answer_index": 1,
+    "difficulty": 85
+  },
+  "57": {
+    "question_text": "Which sentence is grammatically correct? \nA) I ain't never been to Paris. \nB) I haven't ever been to Paris. \nC) I never been to Paris. \nD) I've never been to Paris.",
+    "options": ["A", "B", "C", "D"],
+    "answer_index": 3,
+    "difficulty": 85
+  },
+  "58": {
+    "question_text": "What is the plural form of 'cactus'?",
+    "options": ["cactuses", "cacti", "cactuss", "cacteese"],
+    "answer_index": 1,
+    "difficulty": 85
+  },
+  "59": {
+    "question_text": "Which of the following words is a homophone for 'peace'?",
+    "options": ["piece", "pees", "pays", "peas"],
+    "answer_index": 0,
+    "difficulty": 85
+  },
+  "60": {
+    "question_text": "What does the acronym 'DNA' stand for?",
+    "options": ["Deoxyribonucleic acid", "Dynamic nuclear apparatus", "Digital nerve assembly", "Deoxyribonucleic alloy"],
+    "answer_index": 0,
+    "difficulty": 85
+  }
+}
