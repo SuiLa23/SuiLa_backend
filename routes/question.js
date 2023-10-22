@@ -43,7 +43,7 @@ router.get("/exercise", async (req, res) => {
   diff_mapping.set("B2", 550);
   diff_mapping.set("C1", 700);
   diff_mapping.set("C2", 850);
-  const mappedLevel = diff_mapping.get(level);
+  const mappedLevel = 500;
   try {
     const exercise_pool = await Question.findAll({
       where: {
