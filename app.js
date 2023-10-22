@@ -19,6 +19,9 @@ const pool = new Pool({
 // Middleware to parse JSON requests
 app.use(bodyParser.json());
 
+// Allow all origins for demonstration purposes
+app.use(cors());
+
 // Handle POST requests to /login
 app.get('/', async (req, res) => {
   // create a client connected to devnet
