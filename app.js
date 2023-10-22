@@ -3,7 +3,7 @@ const { Pool } = require('pg');
 const bodyParser = require('body-parser');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 const { getFullnodeUrl, SuiClient } = require('@mysten/sui.js/client');
 
